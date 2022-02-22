@@ -2,10 +2,16 @@
   "name": "gilded-rose-kata",
   "version": "1.0.0",
   "description": "Gilded Rose kata in JavaScript with Jest",
+  "type": "module",
   "scripts": {
     "test": "jest",
-    "test:watch": "jest --watch",
+    "test:watch": "jest --watch --verbose",
     "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -23,6 +29,10 @@
   },
   "homepage": "https://github.com/emilybache/GildedRose-Refactoring-Kata",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1"
   }
 }

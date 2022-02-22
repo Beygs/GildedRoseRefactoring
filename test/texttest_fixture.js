@@ -1,15 +1,19 @@
 
-const { Shop, Item } = require("../src/gilded_rose");
+import Shop from "../src/gilded_rose";
+import Item from "../src/item";
+import DecreasingQualityItem from "../src/items/decreasing_quality";
+import IncreasingQualityItem from "../src/items/increasing_quality";
+import LegendaryItem from "../src/items/legendary";
 
 const items = [
-  new Item("+5 Dexterity Vest", 10, 20),
-  new Item("Aged Brie", 2, 0),
-  new Item("Elixir of the Mongoose", 5, 7),
-  new Item("Sulfuras, Hand of Ragnaros", 0, 80),
-  new Item("Sulfuras, Hand of Ragnaros", -1, 80),
-  new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-  new Item("Backstage passes to a TAFKAL80ETC concert", 10, 49),
-  new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49),
+  new DecreasingQualityItem("+5 Dexterity Vest", 10, 20),
+  new IncreasingQualityItem("Aged Brie", 2, 0),
+  new DecreasingQualityItem("Elixir of the Mongoose", 5, 7),
+  new LegendaryItem("Sulfuras, Hand of Ragnaros", 0, 80),
+  new LegendaryItem("Sulfuras, Hand of Ragnaros", -1, 80),
+  new IncreasingQualityItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+  new IncreasingQualityItem("Backstage passes to a TAFKAL80ETC concert", 10, 49),
+  new IncreasingQualityItem("Backstage passes to a TAFKAL80ETC concert", 5, 49),
 
   // This Conjured item does not work properly yet
   new Item("Conjured Mana Cake", 3, 6),
