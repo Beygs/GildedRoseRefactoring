@@ -1,4 +1,4 @@
-import Item, { validateQuality } from "../item";
+import Item, { validateQuality } from "../item.js";
 
 class DecreasingQualityItem extends Item {
   constructor(name, { sellIn, quality }) {

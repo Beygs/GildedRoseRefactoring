@@ -8,7 +8,7 @@ class Shop {
       item.updateQuality();
     });
 
-    return this.items;
+    return this;
   }
 }
 

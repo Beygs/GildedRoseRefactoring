@@ -1,4 +1,4 @@
-import Item from "../item";
+import Item from "../item.js";
 
 class LegendaryItem extends Item {
   constructor(name, { sellIn, quality } = {}) {

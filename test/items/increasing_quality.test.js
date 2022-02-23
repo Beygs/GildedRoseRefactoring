@@ -92,5 +92,15 @@ describe("IncreasingQualityItem class", () => {
     
     expirableItem.updateQuality();
     expect(expirableItem.quality).toBe(0);
+
+    const expirableItem2 = new IncreasingQualityItem("bar", { sellIn: 2, quality: 50, expirable: true });
+
+    expirableItem2.updateQuality();
+    expect(expirableItem2.quality).toBe(50);
+    expect(expirableItem2.sellIn).toBe(1);
+
+    expirableItem2.updateQuality().updateQuality()
+    expect(expirableItem2.quality).toBe(0);
+    expect(expirableItem2.sellIn).toBe(-1);
   })
 });

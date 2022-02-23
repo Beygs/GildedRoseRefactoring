@@ -6,7 +6,7 @@ describe("LegendaryItem class", () => {
 
   beforeEach(() => {
     randomQuality = Math.floor(Math.random() * 1000);
-    randomItem = new LegendaryItem("foo", { sellIn: 0, quality: randomQuality });
+    randomItem = new LegendaryItem("foo", { quality: randomQuality });
   });
 
   it("should extend Item", () => {
@@ -14,7 +14,6 @@ describe("LegendaryItem class", () => {
     expect(randomItem instanceof LegendaryItem).toBeTruthy();
     expect(randomItem.name).toBe("foo");
     expect(randomItem.quality).toBe(randomQuality);
-    expect(randomItem.sellIn).toBe(0);
   });
 
   it("should be initiated with a quality >= 0", () => {

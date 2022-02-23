@@ -1,4 +1,4 @@
-import Item, { validateQuality } from "../item";
+import Item, { validateQuality } from "../item.js";
 
 class IncreasingQualityItem extends Item {
   constructor(name, { sellIn, quality, expirable = false } = {}) {
@@ -9,13 +9,13 @@ class IncreasingQualityItem extends Item {
 
   updateQuality() {
     this.sellIn--;
-
-    if (this.quality >= 50) return this;
-
+    
     if (this.sellIn <= 0 && this.expirable) {
       this.quality = 0;
       return this;
     }
+    
+    if (this.quality >= 50) return this;
 
     if (this.sellIn <= 5) {
       this.quality = this.quality + 3 <= 50 ? this.quality + 3 : 50;
