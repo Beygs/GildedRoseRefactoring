@@ -4,7 +4,7 @@
   "description": "Gilded Rose kata in JavaScript with Jest",
   "type": "module",
   "scripts": {
-    "test": "jest",
+    "test": "jest --verbose",
     "test:watch": "jest --watch --verbose",
     "test:coverage": "jest --coverage"
   },
