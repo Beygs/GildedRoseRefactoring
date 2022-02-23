@@ -10,7 +10,7 @@ class IncreasingQualityItem extends Item {
   updateQuality() {
     this.sellIn--;
     
-    if (this.sellIn <= 0 && this.expirable) {
+    if (this.sellIn < 0 && this.expirable) {
       this.quality = 0;
       return this;
     }

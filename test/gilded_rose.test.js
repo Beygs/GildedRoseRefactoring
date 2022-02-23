@@ -24,5 +24,16 @@ describe("Store class", () => {
     shop.nextDay().nextDay().nextDay().nextDay();
 
     expect(shop.items[0].sellIn).toBe(itemsCopy[0].sellIn - 5);
+
+    const finalQualities = new Set();
+    const finalQualitiesTarget = new Set([0, 50, 80]);
+
+    for (let i = 0; i < 50; i++) {
+      shop.nextDay();
+    }
+
+    shop.items.forEach((item) => finalQualities.add(item.quality));
+
+    expect(finalQualities).toEqual(finalQualitiesTarget);
   });
 });

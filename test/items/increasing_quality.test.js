@@ -30,6 +30,11 @@ describe("IncreasingQualityItem class", () => {
     expect(() => new IncreasingQualityItem("bad", { quality: 3 })).toThrow();
     expect(() => new IncreasingQualityItem("bad", { sellIn: 2 })).toThrow();
   });
+
+  it("should have an updateQuality method", () => {
+    expect(bigSellInItem.updateQuality).toBeDefined();
+    expect(typeof bigSellInItem.updateQuality).toBe("function");
+  });
   
   it("should be initiated with a quality between 0 & 50", () => {
     expect(() => new IncreasingQualityItem("foo", { sellIn: 2, quality: 2 })).not.toThrow();
@@ -91,7 +96,12 @@ describe("IncreasingQualityItem class", () => {
     const expirableItem = new IncreasingQualityItem("foo", { sellIn: 1, quality: 40, expirable: true });
     
     expirableItem.updateQuality();
+    expect(expirableItem.quality).toBe(43);
+    expect(expirableItem.sellIn).toBe(0);
+
+    expirableItem.updateQuality();
     expect(expirableItem.quality).toBe(0);
+    expect(expirableItem.sellIn).toBe(-1);
 
     const expirableItem2 = new IncreasingQualityItem("bar", { sellIn: 2, quality: 50, expirable: true });
 

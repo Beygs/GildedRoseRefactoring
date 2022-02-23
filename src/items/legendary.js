@@ -11,6 +11,11 @@ class LegendaryItem extends Item {
   }
 
   positiveQuality() {
+    if (this.quality === undefined) {
+      throw new Error(`Every legendary items should have a quality.
+Usage: new LegendaryItem(name: string, { quality: number >= 0 })`);
+    }
+
     if (this.quality < 0) {
       throw new Error("Quality must be a positive number");
     }

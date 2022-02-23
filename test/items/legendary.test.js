@@ -16,6 +16,17 @@ describe("LegendaryItem class", () => {
     expect(randomItem.quality).toBe(randomQuality);
   });
 
+  it("should have a name & a quality", () => {
+    expect(() => new LegendaryItem()).toThrow();
+    expect(() => new LegendaryItem("foo")).toThrow();
+    expect(() => new LegendaryItem({ quality: 3 })).toThrow();
+  });
+
+  it("should have an updateQuality method", () => {
+    expect(randomItem.updateQuality).toBeDefined();
+    expect(typeof randomItem.updateQuality).toBe("function");
+  });
+
   it("should be initiated with a quality >= 0", () => {
     expect(() => new LegendaryItem("foo", { quality: -4 })).toThrow("Quality must be a positive number");
     expect(() => new LegendaryItem("foo", { quality: 0 })).not.toThrow();

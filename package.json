@@ -8,11 +8,6 @@
     "test:watch": "jest --watch --verbose",
     "test:coverage": "jest --coverage"
   },
-  "jest": {
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/emilybache/GildedRose-Refactoring-Kata.git"

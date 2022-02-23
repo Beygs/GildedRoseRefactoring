@@ -30,6 +30,11 @@ describe("DecreasingQualityItem class", () => {
     expect(() => new DecreasingQualityItem("bad", { quality: 3 })).toThrow();
     expect(() => new DecreasingQualityItem("bad", { sellIn: 2 })).toThrow();
   });
+
+  it("should have an updateQuality method", () => {
+    expect(randomItem.updateQuality).toBeDefined();
+    expect(typeof randomItem.updateQuality).toBe("function");
+  });
   
   it("should be initiated with a quality between 0 & 50", () => {
     expect(() => new DecreasingQualityItem("foo", { sellIn: 2, quality: 2 })).not.toThrow();
