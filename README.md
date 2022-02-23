@@ -7,7 +7,9 @@
 [![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
 
-Ma solution au kata de refactorisation Gilded Rose en Javascript, testée avec Jest.
+Ma solution au kata de refactorisation **Gilded Rose** en Javascript, testée avec Jest.
+
+![WoW Gilded Rose](https://static.wikia.nocookie.net/wowpedia/images/8/8b/The_Gilded_Rose.jpg/revision/latest/scale-to-width-down/800?cb=20071222074445)
 
 [Pitch du projet](#pitch-du-projet) | 
 [Getting started](#getting-started) | 
